@@ -63,11 +63,9 @@ class TodoList
   end
 
   def to_s
-    output = "---- Today's Todos ----\n"
-    @todos.each do |todo|
-      output << todo.to_s + "\n"
-    end
-    output
+    text = "---- #{title} ----\n"
+    text << @todos.map(&:to_s).join("\n")
+    text
   end
 end
 

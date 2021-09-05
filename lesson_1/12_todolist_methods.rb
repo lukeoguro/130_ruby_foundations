@@ -63,11 +63,9 @@ class TodoList
   end
 
   def to_s
-    output = "---- Today's Todos ----\n"
-    @todos.each do |todo|
-      output << todo.to_s + "\n"
-    end
-    output
+    text = "---- #{title} ----\n"
+    text << @todos.map(&:to_s).join("\n")
+    text
   end
 
   def each
@@ -98,7 +96,7 @@ class TodoList
     end
   end
 
-  def all_not_done?
+  def all_not_done
     select do |todo|
       !todo.done?
     end
@@ -164,5 +162,3 @@ list = TodoList.new("Today's Todos")
 list.add(todo1)
 list.add(todo2)
 list.add(todo3)
-
-p list.find_by_title("aa milk")
