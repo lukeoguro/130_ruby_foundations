@@ -48,4 +48,4 @@
   * So, when a symbol is passed in, `Symbol#to_proc` is invoked
 * The functions of `&`:
   * For a method definition, `&` is used to specify an explicit block and turns the block into a `Proc` object
-  * In a method definition, `&` is used to turn the `Proc` object (which if it isn't already a `Proc`, Ruby will attempt to make it one with `#to_proc`) and turn it into a block
+  * In a method invocation, `&` is used to turn the `Proc` object (which if it isn't already a `Proc`, Ruby will attempt to make it one with `#to_proc`) into a block
