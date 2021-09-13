@@ -1,0 +1,1 @@
+puts "AbC".match?(/(ABC|abc)/) == "AbC".match?(/[Aa][Bb][Cc]/)
